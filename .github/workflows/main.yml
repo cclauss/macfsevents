@@ -26,14 +26,15 @@ jobs:
       fail-fast: false
       matrix:
         config:
-        - ["3.8",  "py38",      "macos-15"]
-        - ["3.9",  "py38",      "macos-15"]
-        - ["3.9",  "lint",      "macos-15"]
-        - ["3.9",  "py39",      "macos-15"]
-        - ["3.10", "py310",     "macos-15"]
-        - ["3.11", "py311",     "macos-15"]
-        - ["3.12", "py312",     "macos-15"]
-        - ["3.13", "py313",     "macos-15"]
+        - ["3.8",  "py38",      "macos-14"]
+        - ["3.9",  "py38",      "macos-14"]
+        - ["3.9",  "lint",      "macos-14"]
+        - ["3.9",  "py39",      "macos-14"]
+        - ["3.10", "py310",     "macos-14"]
+        - ["3.11", "py311",     "macos-14"]
+        - ["3.12", "py312",     "macos-14"]
+        - ["3.13", "py313",     "macos-14"]
+        - ["3.14", "py314",     "macos-14"]
         - ["3.14", "py314",     "macos-15"]
         - ["3.14", "py314",     "macos-26"]
     runs-on: ${{ matrix.config[2] }}
