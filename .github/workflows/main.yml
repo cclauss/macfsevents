@@ -26,15 +26,16 @@ jobs:
       fail-fast: false
       matrix:
         config:
-        - ["3.8",  "py38",      "macos-12"]
-        - ["3.9",  "py38",      "macos-12"]
-        - ["3.9",  "lint",      "macos-12"]
-        - ["3.9",  "py39",      "macos-12"]
-        - ["3.10", "py310",     "macos-12"]
-        - ["3.11", "py311",     "macos-12"]
-        - ["3.12", "py312",     "macos-12"]
-        - ["3.13", "py313",     "macos-13"]
-        - ["3.14", "py314",     "macos-14"]
+        - ["3.8",  "py38",      "macos-15"]
+        - ["3.9",  "py38",      "macos-15"]
+        - ["3.9",  "lint",      "macos-15"]
+        - ["3.9",  "py39",      "macos-15"]
+        - ["3.10", "py310",     "macos-15"]
+        - ["3.11", "py311",     "macos-15"]
+        - ["3.12", "py312",     "macos-15"]
+        - ["3.13", "py313",     "macos-15"]
+        - ["3.14", "py314",     "macos-15"]
+        - ["3.14", "py314",     "macos-26"]
     runs-on: ${{ matrix.config[2] }}
     if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.event.pull_request.base.repo.full_name
     name: ${{ matrix.config[0] }}-${{ matrix.config[1] }}-${{ matrix.config[2] }}
