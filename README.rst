@@ -23,7 +23,7 @@ This software was written by Malthe Borch <mborch@gmail.com>. The
 Why?
 ----
 
-At this time of writing there are four other libraries that integrate
+At this time of writing, there are four other libraries that integrate
 with the ``FSEvents`` API:
 
 **watchdog**:
@@ -33,7 +33,7 @@ with the ``FSEvents`` API:
 
 **pyobjc-framework-FSEvents**
 
-  These use the PyObjC bridge infrastructure which most applications
+  These use the PyObjC bridge infrastructure, which most applications
   do not need.
 
 **pyfsevents**
@@ -88,22 +88,22 @@ To start the observer in the current thread, use the ``run`` method
   observer.run()
 
 The callback function will be called when an event occurs. 
-Depending on the stream, the callback will have different signitures:
+Depending on the stream, the callback will have different signatures:
 
-a) the standard stream (with callback and paths) will call callback with
+a) the standard stream (with callback and paths) will call the callback with
    parameters callback(path, mask) where path is the directory where a file 
    changed and mask can be decoded using FS_FLAG* and FS_ITEM* constants [#]_.
    a convenience class Mask has a __str__ function to get a text representation
    of the flags.
-b) the stream is created with ``ids = True`` keyword parameter. In this case the call
-   is callback(path, mask, id). The id can be used in the ``since`` keyword
-   parameter of another stream object to also recieve historic events (that
+b) the stream is created with ``ids = True`` keyword parameter. In this case, the
+   call is callback(path, mask, id). The id can be used in the ``since`` keyword
+   parameter of another stream object to also receive historic events (that
    happened before the stream became active)
 c) if ``file_events`` is kwarg set to True, a
    ``FileEvent`` instance is passed to the callback and has 3 attributes:
-   ``mask``, ``cookie`` and ``name``. ``name`` parameter contains the path
+   ``mask``, ``cookie``, and ``name``. ``name`` parameter contains the path
    at which the event happened (may be a subdirectory) while ``mask``
-   parameter is the event mask. this mimicks ``inotify`` behaviour. 
+   parameter is the event mask. this mimics ``inotify`` behaviour. 
    see also below.
 
 To stop observation, simply unschedule the stream and stop the
@@ -126,8 +126,8 @@ stream constructor::
 
   stream = Stream(callback, path, file_events=True)
 
-The event object mimick the file events of the ``inotify`` kernel
-extension available in newer linux kernels. It has the following
+The event object mimics the file events of the ``inotify`` kernel
+extension available in newer Linux kernels. It has the following
 attributes:
 
 ``mask``
