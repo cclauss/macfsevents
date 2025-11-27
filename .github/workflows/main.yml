@@ -27,7 +27,7 @@ jobs:
       matrix:
         config:
         - ["3.8",  "py38",      "macos-14"]
-        - ["3.9",  "py38",      "macos-14"]
+        - ["3.9",  "py39",      "macos-14"]
         - ["3.9",  "lint",      "macos-14"]
         - ["3.9",  "py39",      "macos-14"]
         - ["3.10", "py310",     "macos-14"]
