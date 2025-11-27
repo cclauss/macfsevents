@@ -29,8 +29,7 @@ with the ``FSEvents`` API:
 **watchdog**:
 
   This library actually builds on the code in :mod:`MacFSEvents` (this
-  project), but currently does not support Python 3 (though this
-  should happen soon). It also includes shell utilities.
+  project). It also includes shell utilities.
 
 **pyobjc-framework-FSEvents**
 
